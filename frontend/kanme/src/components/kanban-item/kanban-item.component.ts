@@ -37,7 +37,7 @@ export class KanbanItemComponent implements OnChanges , AfterViewInit{
   }
 
   enterPressed(event:any){
-    this.itemValueChanged.emit(event.target.innerText);
+    this.input.nativeElement.blur();
   }
 
 
