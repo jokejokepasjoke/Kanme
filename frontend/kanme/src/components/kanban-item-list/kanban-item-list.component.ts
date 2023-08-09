@@ -10,12 +10,22 @@ export class KanbanItemListComponent {
   @Input({ required: true }) title!: string;
   @Input({ required: false }) titleColor!: string;
   @Input() itemList!: string[]
-
+  @Input() canCreateNewItems:boolean = false;
+  ongoingItemCreation:boolean = false;
 
   constructor() {
     if (!this.itemList) {
       this.itemList = [];
     }
+  }
+
+  startItemCreation(){
+    this.ongoingItemCreation = true;
+  }
+
+  completeItemCreation(value:string){
+    this.ongoingItemCreation = false;
+    this.itemList.unshift(value)
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -29,8 +39,7 @@ export class KanbanItemListComponent {
         event.currentIndex,
       );
     }
-    console.log(event);
-
+    //Emit event here to sync state
   }
   
 }
