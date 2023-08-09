@@ -1,9 +1,10 @@
 # Roadmap
 ## Goalpost 1
-* [ ] Have one kanban board with 4 states
-* [ ] Be able to drag and drop tasks between states
-* [ ] Tasks must have a title and id
-* [ ] Must be able to create tasks
+* [X] Have one kanban board with 4 states
+* [X] Be able to drag and drop tasks between states
+* [X] Tasks must have a title and id
+* [X] Must be able to create tasks
+* [ ] Must be able to edit and delete tasks
 * [ ] Must work on mobile -> Mobile first. Lock screen orientation sideways
 * [ ]  Must work on all browsers
 ## Goalpost 2
