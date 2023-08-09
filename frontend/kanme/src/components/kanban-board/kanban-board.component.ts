@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class KanbanBoardComponent {
 
-  originalItemList:string[]= [...'12345'].map(x=>'item ' + x);
+  originalItemList:string[]= [].map(x=>'item ' + x);
 
 
 }

@@ -5,9 +5,9 @@
      
         <kanban-item [shouldSetFocus]="ongoingItemCreation" (itemValueChanged)="completeItemCreation($event)" *ngIf="ongoingItemCreation" [editable]="true"  [item]="''"></kanban-item>
         <kanban-item  cdkDrag  [item]="item" *ngFor="let item of itemList"></kanban-item>
-        <button 
+        <button  [disabled]="ongoingItemCreation"
         (click)="startItemCreation()"
-        *ngIf="canCreateNewItems" class="mt-auto duration-300 transition ease-in-out hover:bg-slate-400 align-self-end justify-self-end w-100 rounded shadow-inner bg-slate-300  justify-center items-center p-3.5 flex cursor-pointer font-sans font-semibold">
+        *ngIf="canCreateNewItems" class="disabled:bg-slate-50 mt-auto duration-300 transition ease-in-out hover:bg-slate-400 align-self-end justify-self-end w-100 rounded shadow-inner bg-slate-300  justify-center items-center p-3.5 flex cursor-pointer font-sans font-semibold">
             Add
         </button >
 
