@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'kanban-item-list',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./kanban-item-list.component.scss']
 })
 export class KanbanItemListComponent {
+@Input({ required: true }) title! : string;
+@Input({ required: false }) titleColor! : string;
+
+
 
 }

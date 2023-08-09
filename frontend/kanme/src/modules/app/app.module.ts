@@ -6,6 +6,7 @@ import { AppComponent } from '../../components/app/app.component';
 import { KanbanItemComponent } from '../../components/kanban-item/kanban-item.component';
 import { KanbanBoardComponent } from 'src/components/kanban-board/kanban-board.component';
 import { KanbanItemListComponent } from 'src/components/kanban-item-list/kanban-item-list.component';
+import { DragDropModule } from '@angular/cdk/drag-drop'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { KanbanItemListComponent } from 'src/components/kanban-item-list/kanban-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
